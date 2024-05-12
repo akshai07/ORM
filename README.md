@@ -9,7 +9,7 @@ To develop a Django application to store and retrieve data from a Book database 
 
 ## Entity Relationship Diagram
 
-![Alt text](<Screenshot Table.png>)
+![320077298-28e98abf-2f0c-4c2a-b433-190c6e6592fe](https://github.com/akshai07/ORM/assets/152007451/a12202fa-5798-47c1-94cd-bdee34288cc0)
 
 ## DESIGN STEPS
 
@@ -27,12 +27,6 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 ```
-admin.py
-
-from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
-
 models.py
 
 from django.db import models
@@ -46,9 +40,16 @@ class Employee (models.Model):
 class EmployeeAdmin(admin.ModelAdmin):
     list_display=('eid','name','salary','age','email')
 ```
+```
+admin.py:
+from django.contrib import admin
+from .models import Book,BookAdmin
+admin.site.register(Book,BookAdmin)
+```
+
 ## OUTPUT
 
-![Alt text](<Screenshot Link.png>)
+ ![320069592-ce7ec008-de1f-44db-8594-39060bfd7381](https://github.com/akshai07/ORM/assets/152007451/f158e437-129f-49ce-af39-3092dd399d67)
 
 
 ## RESULT
